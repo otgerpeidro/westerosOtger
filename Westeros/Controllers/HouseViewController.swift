@@ -24,6 +24,7 @@ class HouseViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    // Chapuza de los de Cupertina (relacionada con los nil)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
