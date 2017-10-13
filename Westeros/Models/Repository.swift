@@ -39,6 +39,7 @@ final class LocalFactory : HouseFactory{
             // Añadir los personajes a las casas
             stark.add(person: robb)
             stark.add(person: arya)
+            
             lannister.add(person: tyrion)
             lannister.add(person: cersei)
             
@@ -46,6 +47,5 @@ final class LocalFactory : HouseFactory{
             
         }
     }
-    
-    
 }
+

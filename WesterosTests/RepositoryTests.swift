@@ -22,7 +22,7 @@ class RepositoryTests: XCTestCase {
     }
     
     func testLoadRepositoryCreation(){
-        XCTAssertNotNil(Respository.local)
+        XCTAssertNotNil(Repository.local)
     }
     
     func testLocalRepositoryHousesCreation(){
