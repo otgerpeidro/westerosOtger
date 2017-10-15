@@ -33,8 +33,8 @@ class PersonTest: XCTestCase {
         starkSigil = Sigil(image: starkImage, description: "Direwolf")
         lannisterSigil = Sigil(image: lannisterImage, description:"Rampant Lion")
         
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!")
-        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!")
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!", url: URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!)
+        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!",url: URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!)
         
         robb = Person(name: "Robb", alias: "The young wolf", house: starkHouse)
         arya = Person(name: "Arya", house: starkHouse)
