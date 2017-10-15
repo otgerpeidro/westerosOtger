@@ -55,6 +55,12 @@ extension House{
             add(person: person)
         }
     }
+    
+    // Sorted [Person]
+    func sortedMembers() -> [Person]{
+        return _members.sorted()
+    }
+    
 }
 
 extension House{
