@@ -11,9 +11,6 @@ import XCTest
 
 class PersonTest: XCTestCase {
     
-    var starkImage : UIImage!
-    var lannisterImage : UIImage!
-    
     var starkSigil : Sigil!
     var lannisterSigil : Sigil!
     
@@ -27,15 +24,14 @@ class PersonTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        starkImage = #imageLiteral(resourceName: "codeIsComing.png")
-        lannisterImage = #imageLiteral(resourceName: "lannister.jpg")
         
-        starkSigil = Sigil(image: starkImage, description: "Direwolf")
-        lannisterSigil = Sigil(image: lannisterImage, description:"Rampant Lion")
+        starkHouse = Repository.local.house(named: "Stark")
+        lannisterHouse = Repository.local.house(named: "Lannister")
         
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!", url: URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!)
-        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!",url: URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!)
-        
+        starkSigil = starkHouse.sigil
+        lannisterSigil = lannisterHouse.sigil
+
+        //robb = starkHouse.sortedMembers()
         robb = Person(name: "Robb", alias: "The young wolf", house: starkHouse)
         arya = Person(name: "Arya", house: starkHouse)
         tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)

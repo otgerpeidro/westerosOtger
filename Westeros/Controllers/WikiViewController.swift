@@ -17,7 +17,7 @@ class WikiViewController: UIViewController {
     
     init(model: House){
        self.model = model
-        super.init(nibName: nil, bundle: nil)
+       super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
